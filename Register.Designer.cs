@@ -38,8 +38,8 @@
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             label5 = new Label();
-            richTextBox1 = new RichTextBox();
             button1 = new Button();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // username
@@ -132,14 +132,6 @@
             label5.TabIndex = 9;
             label5.Text = "City";
             // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(176, 255);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(271, 96);
-            richTextBox1.TabIndex = 10;
-            richTextBox1.Text = "Rajkot,Morbi,Ahemdabad";
-            // 
             // button1
             // 
             button1.Location = new Point(116, 380);
@@ -150,13 +142,23 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(176, 258);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(271, 94);
+            listBox1.TabIndex = 12;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(listBox1);
             Controls.Add(button1);
-            Controls.Add(richTextBox1);
             Controls.Add(label5);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
@@ -185,7 +187,7 @@
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private Label label5;
-        private RichTextBox richTextBox1;
         private Button button1;
+        private ListBox listBox1;
     }
 }
