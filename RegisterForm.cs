@@ -59,7 +59,7 @@ namespace WinFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string query = "update RegisterForm set(name )";
+            string query = "update RegisterForm set name='"+ name.Text + "',Branch='"+ Branch.Text + "' where Id='"+Convert.ToInt16(IDTXT.Text)+"'";
             SqlCommand cmd = new SqlCommand(query,con);
             con.Open(); 
             cmd.ExecuteNonQuery();
