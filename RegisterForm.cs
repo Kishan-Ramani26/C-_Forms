@@ -13,8 +13,8 @@ namespace WinFormsApp1
 {
     public partial class RegisterForm : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-6V5I9OV;Initial Catalog=RegisterDB;Integrated Security=True");
-        String gender;
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=G:\\C#\\WinFormsApp1\\Database1.mdf;Integrated Security=True");
+        string gender;
         public RegisterForm()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String query = "insert into RegisterForm values('" + name.Text + "','" + password.Text + "','" + Branch.Text + "','" + Convert.ToInt32(Sem.Text) + "','"+gender+"','"+citylist.SelectedIndex+"')";
+            string query = "insert into RegisterForm values('" + name.Text + "','" + password.Text + "','" + Branch.Text + "','" + Convert.ToInt32(Sem.Text) + "','" + gender + "','" + citylist.SelectedIndex.ToString() + "')";
             SqlCommand cmd = new SqlCommand(query, con);
 
             con.Open();
@@ -55,6 +55,15 @@ namespace WinFormsApp1
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             gender = "FEMALE";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string query = "update RegisterForm set(name )";
+            SqlCommand cmd = new SqlCommand(query,con);
+            con.Open(); 
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

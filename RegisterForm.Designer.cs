@@ -42,6 +42,10 @@
             RegisterButton = new Button();
             password = new TextBox();
             label6 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            IDTXT = new TextBox();
+            Id = new Label();
             SuspendLayout();
             // 
             // label1
@@ -172,11 +176,50 @@
             label6.TabIndex = 12;
             label6.Text = "Password : ";
             // 
+            // button1
+            // 
+            button1.Location = new Point(176, 379);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 14;
+            button1.Text = "Update";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(266, 379);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 15;
+            button2.Text = "Delete";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // IDTXT
+            // 
+            IDTXT.Location = new Point(161, 26);
+            IDTXT.Name = "IDTXT";
+            IDTXT.Size = new Size(223, 23);
+            IDTXT.TabIndex = 16;
+            // 
+            // Id
+            // 
+            Id.AutoSize = true;
+            Id.Location = new Point(84, 34);
+            Id.Name = "Id";
+            Id.Size = new Size(27, 15);
+            Id.TabIndex = 17;
+            Id.Text = "ID : ";
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Id);
+            Controls.Add(IDTXT);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(password);
             Controls.Add(label6);
             Controls.Add(RegisterButton);
@@ -214,5 +257,9 @@
         private Button RegisterButton;
         private TextBox password;
         private Label label6;
+        private Button button1;
+        private Button button2;
+        private TextBox IDTXT;
+        private Label Id;
     }
 }
