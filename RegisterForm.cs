@@ -64,6 +64,8 @@ namespace WinFormsApp1
             con.Open(); 
             cmd.ExecuteNonQuery();
             con.Close();
+
+            MessageBox.Show("Database Updated Successfully");
         }
     }
 }
