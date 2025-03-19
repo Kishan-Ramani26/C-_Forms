@@ -46,7 +46,7 @@
             // 
             // Insert_BTN
             // 
-            Insert_BTN.Location = new Point(70, 270);
+            Insert_BTN.Location = new Point(78, 194);
             Insert_BTN.Name = "Insert_BTN";
             Insert_BTN.Size = new Size(68, 36);
             Insert_BTN.TabIndex = 0;
@@ -66,7 +66,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(70, 140);
+            label2.Location = new Point(70, 120);
             label2.Name = "label2";
             label2.Size = new Size(44, 15);
             label2.TabIndex = 2;
@@ -75,7 +75,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(70, 210);
+            label3.Location = new Point(70, 165);
             label3.Name = "label3";
             label3.Size = new Size(30, 15);
             label3.TabIndex = 3;
@@ -85,26 +85,27 @@
             // 
             name.Location = new Point(136, 78);
             name.Name = "name";
-            name.Size = new Size(193, 23);
+            name.Size = new Size(497, 23);
             name.TabIndex = 4;
+            name.TextChanged += name_TextChanged;
             // 
             // branch
             // 
-            branch.Location = new Point(136, 140);
+            branch.Location = new Point(136, 120);
             branch.Name = "branch";
-            branch.Size = new Size(193, 23);
+            branch.Size = new Size(497, 23);
             branch.TabIndex = 5;
             // 
             // sem
             // 
-            sem.Location = new Point(136, 210);
+            sem.Location = new Point(136, 165);
             sem.Name = "sem";
-            sem.Size = new Size(193, 23);
+            sem.Size = new Size(497, 23);
             sem.TabIndex = 6;
             // 
             // Update_BTN
             // 
-            Update_BTN.Location = new Point(144, 270);
+            Update_BTN.Location = new Point(152, 194);
             Update_BTN.Name = "Update_BTN";
             Update_BTN.Size = new Size(68, 36);
             Update_BTN.TabIndex = 7;
@@ -114,7 +115,7 @@
             // 
             // Delete_BTN
             // 
-            Delete_BTN.Location = new Point(218, 270);
+            Delete_BTN.Location = new Point(226, 194);
             Delete_BTN.Name = "Delete_BTN";
             Delete_BTN.Size = new Size(68, 36);
             Delete_BTN.TabIndex = 8;
@@ -124,9 +125,9 @@
             // 
             // button4
             // 
-            button4.Location = new Point(393, 72);
+            button4.Location = new Point(309, 194);
             button4.Name = "button4";
-            button4.Size = new Size(287, 48);
+            button4.Size = new Size(324, 36);
             button4.TabIndex = 9;
             button4.Text = "Display";
             button4.UseVisualStyleBackColor = true;
@@ -135,16 +136,17 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(393, 140);
+            dataGridView1.Location = new Point(70, 236);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(342, 214);
+            dataGridView1.Size = new Size(563, 120);
             dataGridView1.TabIndex = 10;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // ID_Val
             // 
             ID_Val.Location = new Point(136, 34);
             ID_Val.Name = "ID_Val";
-            ID_Val.Size = new Size(193, 23);
+            ID_Val.Size = new Size(497, 23);
             ID_Val.TabIndex = 12;
             // 
             // ID

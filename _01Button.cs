@@ -32,7 +32,7 @@ namespace WinFormsApp1
 
         private void Update_BTN_Click(object sender, EventArgs e)
         {
-            string query = "update Demo set name='"+name.Text+"',branch='"+branch.Text+"',sem='"+Convert.ToInt32(sem.Text)+"' where id='"+Convert.ToInt32(ID_Val.Text)+"' ";
+            string query = "update Demo set name='" + name.Text + "',branch='" + branch.Text + "',sem='" + Convert.ToInt32(sem.Text) + "' where id='" + Convert.ToInt32(ID_Val.Text) + "' ";
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             cmd.ExecuteNonQuery();
@@ -59,6 +59,16 @@ namespace WinFormsApp1
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
