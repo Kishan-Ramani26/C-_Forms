@@ -43,5 +43,17 @@ namespace WinFormsApp1
             con.Close();
             MessageBox.Show("Inserted Successfully");
         }
+
+        private void show_btn_Click(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=G:\\C#\\WinFormsApp1\\Database1.mdf;Integrated Security=True");
+            con.Open();
+            string query = "select * from Student";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
     }
 }

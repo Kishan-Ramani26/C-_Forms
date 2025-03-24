@@ -37,6 +37,9 @@
             register_btn = new Button();
             city = new TextBox();
             label4 = new Label();
+            dataGridView1 = new DataGridView();
+            show_btn = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -86,7 +89,7 @@
             label3.Name = "label3";
             label3.Size = new Size(29, 15);
             label3.TabIndex = 4;
-            label3.Text = "QTY";
+            label3.Text = "sem";
             // 
             // register_btn
             // 
@@ -114,11 +117,31 @@
             label4.TabIndex = 7;
             label4.Text = "City";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(374, 91);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(240, 166);
+            dataGridView1.TabIndex = 9;
+            // 
+            // show_btn
+            // 
+            show_btn.Location = new Point(277, 284);
+            show_btn.Name = "show_btn";
+            show_btn.Size = new Size(75, 23);
+            show_btn.TabIndex = 10;
+            show_btn.Text = "Show Data";
+            show_btn.UseVisualStyleBackColor = true;
+            show_btn.Click += show_btn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(show_btn);
+            Controls.Add(dataGridView1);
             Controls.Add(city);
             Controls.Add(label4);
             Controls.Add(register_btn);
@@ -130,6 +153,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -145,5 +169,7 @@
         private Button register_btn;
         private TextBox city;
         private Label label4;
+        private DataGridView dataGridView1;
+        private Button show_btn;
     }
 }
