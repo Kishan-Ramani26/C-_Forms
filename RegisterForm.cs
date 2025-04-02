@@ -70,7 +70,17 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-             
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string query = "delete from RegisterForm where Id='" + Convert.ToInt16(IDTXT.Text)+"' ";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Deleted Successfully");
         }
     }
 }

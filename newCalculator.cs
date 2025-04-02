@@ -135,6 +135,9 @@ namespace WinFormsApp1
         private void button13_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
+            value1 = 0;
+            value2 = 0;
+            operation = "";
         }
     }
 }

@@ -43,9 +43,9 @@
             password = new TextBox();
             label6 = new Label();
             button1 = new Button();
-            button2 = new Button();
             IDTXT = new TextBox();
             Id = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -186,16 +186,6 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
             // 
-            // button2
-            // 
-            button2.Location = new Point(266, 379);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 15;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // IDTXT
             // 
             IDTXT.Location = new Point(161, 26);
@@ -212,14 +202,24 @@
             Id.TabIndex = 17;
             Id.Text = "ID : ";
             // 
+            // button2
+            // 
+            button2.Location = new Point(278, 379);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 18;
+            button2.Text = "Delete";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(Id);
             Controls.Add(IDTXT);
-            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(password);
             Controls.Add(label6);
@@ -259,8 +259,8 @@
         private TextBox password;
         private Label label6;
         private Button button1;
-        private Button button2;
         private TextBox IDTXT;
         private Label Id;
+        private Button button2;
     }
 }
