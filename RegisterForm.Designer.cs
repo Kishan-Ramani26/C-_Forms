@@ -46,6 +46,9 @@
             IDTXT = new TextBox();
             Id = new Label();
             button2 = new Button();
+            dataGridView1 = new DataGridView();
+            ShowData = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -204,7 +207,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(278, 379);
+            button2.Location = new Point(257, 379);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 18;
@@ -212,11 +215,31 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(411, 111);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(348, 206);
+            dataGridView1.TabIndex = 19;
+            // 
+            // ShowData
+            // 
+            ShowData.Location = new Point(343, 384);
+            ShowData.Name = "ShowData";
+            ShowData.Size = new Size(75, 23);
+            ShowData.TabIndex = 20;
+            ShowData.Text = "showData";
+            ShowData.UseVisualStyleBackColor = true;
+            ShowData.Click += ShowData_Click;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ShowData);
+            Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(Id);
             Controls.Add(IDTXT);
@@ -238,6 +261,7 @@
             Name = "RegisterForm";
             Text = "RegisterForm";
             Load += RegisterForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -262,5 +286,7 @@
         private TextBox IDTXT;
         private Label Id;
         private Button button2;
+        private DataGridView dataGridView1;
+        private Button ShowData;
     }
 }

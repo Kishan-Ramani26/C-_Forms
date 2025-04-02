@@ -45,6 +45,9 @@ namespace WinFormsApp1
             con.Close();
 
             MessageBox.Show("Data Inserted Successfully");
+
+            Login L = new Login();
+            L.ShowDialog();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -75,12 +78,23 @@ namespace WinFormsApp1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string query = "delete from RegisterForm where Id='" + Convert.ToInt16(IDTXT.Text)+"' ";
+            string query = "delete from RegisterForm where Id='" + Convert.ToInt16(IDTXT.Text) + "' ";
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Deleted Successfully");
+        }
+
+        private void ShowData_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            string query = "select * from RegisterForm";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
         }
     }
 }
